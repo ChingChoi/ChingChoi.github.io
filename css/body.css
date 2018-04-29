@@ -276,8 +276,8 @@ body { font-family: sans-serif;}
   margin-bottom: 1%;
   width: 48.5%;
   text-align: center;
-  background-color: #EEE;
-  color: #111;
+  background-color: #DDD;
+  color: #222;
 }
 
 #show-more:hover {
@@ -296,8 +296,8 @@ body { font-family: sans-serif;}
   margin-bottom: 1%;
   width: 48.5%;
   text-align: center;
-  background-color: #111;
-  color: #EEE;
+  background-color: #222;
+  color: #DDD;
 }
 
 #show-more h3 {
@@ -312,10 +312,10 @@ body { font-family: sans-serif;}
 
 #interest-container {
   text-align: center;
-  background-color: #FDD;
+  background-color: #222;
   margin: 0;
   padding: 100px;
-  color: #A33;
+  color: #DDD;
 }
 
 @keyframes fadein {

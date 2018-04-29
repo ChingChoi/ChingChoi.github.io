@@ -103,3 +103,16 @@ body { font-family: sans-serif; }
   color: #555;
   z-index: 1;
 }
+
+.grid-message {
+  padding: 50px;
+  font-size: 2vw;
+  background-color: #EEE;
+}
+
+.grid-message-dark {
+  padding: 50px;
+  font-size: 2vw;
+  background-color: #222;
+  color: #EEE;
+}
