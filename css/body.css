@@ -1,0 +1,348 @@
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Round", Verdana, Tahoma;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1:hover {
+  cursor: default;
+}
+
+h3:hover {
+  cursor: default;
+}
+
+p:hover {
+  cursor: default;
+}
+
+body { font-family: sans-serif;}
+
+.container {
+  width: 100%;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+#header-section {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+}
+
+#main-section {
+  width: 80%;
+  padding: 1%;
+  padding-top: 50px;
+  padding-bottom: 0;
+  margin: 0 auto;
+}
+
+#main-section img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+
+#footer-section {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 30%;
+}
+
+.nav-item {
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  color: #DDD;
+  text-decoration: none;
+}
+
+.nav-item a:active {
+  color: #DDD;
+  text-decoration: none;
+}
+
+.nav-item a {
+  color: #FFF;
+  text-decoration: none;
+  height: 40px;
+  display: inline-block;
+  text-anchor: center;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+#fav-icon {
+  background-image: url(../img/pawWhite.png);
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+}
+
+#fav-icon-gray {
+  background-image: url(../img/pawGray.png);
+  background-size: 40px 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+}
+
+.footer-row {
+  padding: 2%;
+}
+
+#footer-main a {
+  font-family: 'Indie Flower', cursive;
+  color: gray;
+  font-size: 2em;
+}
+
+.footer-main p {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+  color: gray;
+  padding-left: 5px;
+}
+
+.footer-col p {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+  color: gray;  
+}
+
+.footer-col a {
+  font-size: 1.1em;
+  color: gray;
+  padding-left: 5px;  
+}
+
+#facebook-logo-icon {
+  background-image: url(../img/logo-facebook.png);
+  background-size: 40px 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+}
+
+#twitter-logo-icon {
+  background-image: url(../img/logo-twitter.png);
+  background-size: 40px 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;  
+}
+
+#instagram-logo-icon {
+  background-image: url(../img/logo-instagram.png);
+  background-size: 40px 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+}
+
+.theme-font {
+  font-family: 'Indie Flower', cursive;
+}
+
+#mission-container {
+	height: auto !important;
+	padding-top: 40px;
+	min-height: 70% !important;
+	overflow: hidden;
+}
+
+#mission-container img {
+	min-height: 100%;
+	min-width: 120%;
+	position: relative;
+
+	-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+	   -moz-animation: fadein 3s; /* Firefox < 16 */
+	    -ms-animation: fadein 3s; /* Internet Explorer */
+	     -o-animation: fadein 3s; /* Opera < 12.1 */
+	        animation: fadein 3s;
+}
+
+#mission-statement {
+	position: fixed;
+	left: 10%;
+	top: 10%;
+}
+
+#mission-statement h3 {
+	font-size: 3em;
+	font-weight: bold;
+	-webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+	   -moz-animation: fadein 5s; /* Firefox < 16 */
+	    -ms-animation: fadein 5s; /* Internet Explorer */
+	     -o-animation: fadein 5s; /* Opera < 12.1 */
+	        animation: fadein 5s;
+}
+
+#mission-statement p {
+	font-size: 1.5em;
+	font-weight: bold;
+	-webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+	   -moz-animation: fadein 5s; /* Firefox < 16 */
+	    -ms-animation: fadein 5s; /* Internet Explorer */
+	     -o-animation: fadein 5s; /* Opera < 12.1 */
+	        animation: fadein 5s;
+}
+
+ #project-container {
+   padding-top: 1%;
+}
+
+/*
+#project-container img {
+	min-height: 100%;
+	min-width: 120%;
+	position: relative;
+
+	-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+	   /* -moz-animation: fadein 3s; /* Firefox < 16 */
+	    /* -ms-animation: fadein 3s; Internet Explorer */
+	     /* -o-animation: fadein 3s; Opera < 12.1 */
+	        /* animation: fadein 3s; */
+/* } */ 
+
+#project-questions {
+	position: fixed;
+	left: 10%;
+	top: 10%;
+}
+
+#project-questions h3 {
+	font-size: 3em;
+	font-weight: bold;
+	-webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+	   -moz-animation: fadein 5s; /* Firefox < 16 */
+	    -ms-animation: fadein 5s; /* Internet Explorer */
+	     -o-animation: fadein 5s; /* Opera < 12.1 */
+	        animation: fadein 5s;
+}
+
+#project-questions p {
+	font-size: 1.5em;
+	font-weight: bold;
+	-webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+	   -moz-animation: fadein 5s; /* Firefox < 16 */
+	    -ms-animation: fadein 5s; /* Internet Explorer */
+	     -o-animation: fadein 5s; /* Opera < 12.1 */
+	        animation: fadein 5s;
+}
+
+.project-link {
+  color: #5AA !important;
+  font-size: 0.6em !important;
+}
+
+#skill-container-grid img {
+  width: 100%;
+}
+
+#skill-container {
+  text-align: center;
+  background-color: #222;
+  margin: 0;
+  padding: 100px;
+  color: #DDD;
+}
+
+#show-more-less-container {
+  margin: 0 auto;
+  min-height: 2.5vw;
+}
+
+#show-more {
+  position: relative;
+  float: left;
+  margin: 0;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  width: 48.5%;
+  text-align: center;
+  background-color: #EEE;
+  color: #111;
+}
+
+#show-more:hover {
+  cursor: pointer;
+}
+
+#show-less:hover {
+  cursor: pointer;
+}
+
+#show-less {
+  position: relative;
+  float: left;
+  margin: 0;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  width: 48.5%;
+  text-align: center;
+  background-color: #111;
+  color: #EEE;
+}
+
+#show-more h3 {
+  margin: 0;
+  font-size: 1.5vw;
+}
+
+#show-less h3 {
+  margin: 0;
+  font-size: 1.5vw;
+}
+
+#interest-container {
+  text-align: center;
+  background-color: #FDD;
+  margin: 0;
+  padding: 100px;
+  color: #A33;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
