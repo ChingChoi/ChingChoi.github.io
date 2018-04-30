@@ -80,6 +80,11 @@ $(document).ready(function() {
 });
 
 
-$(window).on('load', function() {
-    window.dispatchEvent(new Event('resize'));
+// $(window).on('load', function() {
+//     window.dispatchEvent(new Event('resize'));
+// });
+
+$(window).on('load resize', function () {
+    $('.content .right').width( $(this).width() - 480 );
+    $('.content .right').width( $(this).width() + 480 );
 });
