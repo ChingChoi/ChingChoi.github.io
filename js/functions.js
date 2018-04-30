@@ -85,6 +85,12 @@ $(document).ready(function() {
 // });
 
 $(window).on('load', function () {
-    $('html').css({zoom: 1.1});
-    $('html').css({zoom: 1});
+    $('html').delay(800).queue(function(next) {
+        $(this).css('zoom', '110%');
+        next();
+    });
+    $('html').delay(800).queue(function(next) {
+        $(this).css('zoom', '100%');
+        next();
+    });
 });
