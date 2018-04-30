@@ -1,15 +1,22 @@
 $(document).ready(function() {
 
-	var divider = $('h3').offset();
-
+    var divider = $('#mission-container').offset().top + 90;
+    var contactDivider = $('#contact-container').offset().top;
+    
     window.onscroll = function() {
 		if (window.pageYOffset > 0) {
-			var movement = (window.pageYOffset / divider.top);
+			var movement = (window.pageYOffset / divider);
 			$('#mission-background-image').css({left: movement * -25});
 		}
         if (window.pageYOffset > 0) {
-            var opac = (window.pageYOffset / divider.top);
+            var opac = (window.pageYOffset / divider);
             $('#mission-statement').css({opacity: 1 - (opac * 1) / 5});
+        }
+        if (window.pageYOffset > 0) {
+            var moveIn = ((window.pageYOffset - contactDivider) / divider);
+            $('#contact-info').css({opacity: moveIn * 1});
+            $('#contact-info').css({left: moveIn * 25});
+            $('#contact-background-image').css({left: moveIn * -15 - 150});
         }
     }
 
@@ -70,4 +77,5 @@ $(document).ready(function() {
     //     var aid = $(this).attr('href');
     //     $('html,body').animate({scrollTop: $(aid).offset().top}, 1000);
     // });
+    $('.video').load($(window).trigger('resize'));
 })
