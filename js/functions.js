@@ -77,5 +77,10 @@ $(document).ready(function() {
     //     var aid = $(this).attr('href');
     //     $('html,body').animate({scrollTop: $(aid).offset().top}, 1000);
     // });
+});
+
+
+$(window).on('load', function() {
+    alert("fired");
     $('.video').load($(window).trigger('resize'));
-})
+});
