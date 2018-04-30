@@ -84,7 +84,7 @@ $(document).ready(function() {
 //     window.dispatchEvent(new Event('resize'));
 // });
 
-$(window).on('load resize', function () {
-    $('.content .right').width( $(this).width() - 480 );
-    $('.content .right').width( $(this).width() + 480 );
+$(window).on('load', function () {
+    $('html').css({zoom: 1.1});
+    $('html').css({zoom: 1});
 });
