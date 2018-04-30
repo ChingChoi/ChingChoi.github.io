@@ -1,5 +1,4 @@
-$(document).ready(function() {
-
+$(window).on('load', function () {
 	// external js: masonry.pkgd.js
 	var grid = document.querySelector('.grid');
 	var msnry = new Masonry( grid, {
@@ -16,13 +15,4 @@ $(document).ready(function() {
 	  itemElem.classList.toggle('is-expanded');
 	  msnry.layout();
 	});
-
-/*	var information = document.querySelector('.information');
-	information.addEventListener( 'click', function( event ) {
-	  // don't proceed if item content was not clicked on
-
-	  var itemElem = event.target.parentNode.parentNode;
-	  itemElem.classList.toggle('is-expanded');
-	  msnry.layout();
-	});*/
-})
+});

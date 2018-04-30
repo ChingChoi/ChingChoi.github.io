@@ -84,13 +84,13 @@ $(document).ready(function() {
 //     window.dispatchEvent(new Event('resize'));
 // });
 
-$(window).on('load', function () {
-    $('html').delay(800).queue(function(next) {
-        $(this).css('zoom', '110%');
-        next();
-    });
-    $('html').delay(800).queue(function(next) {
-        $(this).css('zoom', '100%');
-        next();
-    });
-});
+// $(window).on('load', function () {
+//     $('.grid').delay(800).queue(function(next) {
+//         $(this).css('display', 'none');
+//         next();
+//     });
+//     $('.grid').delay(800).queue(function(next) {
+//         $(this).css('display', 'initial');
+//         next();
+//     });
+// });
