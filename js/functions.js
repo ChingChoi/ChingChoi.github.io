@@ -81,6 +81,5 @@ $(document).ready(function() {
 
 
 $(window).on('load', function() {
-    alert("fired");
     $('.video').load($(window).trigger('resize'));
 });
