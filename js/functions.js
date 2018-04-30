@@ -1,10 +1,8 @@
-$(window).on('load', function() {
-
-    var divider = $('#mission-container').offset().top + 90;
-    var contactDivider = $('#contact-container').offset().top;
-
+$(document).ready(function() {
     window.onscroll = function() {
-        if (window.pageYOffset > 0) {
+        var divider = $('#mission-container').offset().top + 90;
+        var contactDivider = $('#contact-container').offset().top;
+            if (window.pageYOffset > 0) {
             var movement = (window.pageYOffset / divider);
             $('#mission-background-image').css({left: movement * -25});
         }
@@ -19,7 +17,6 @@ $(window).on('load', function() {
             $('#contact-background-image').css({left: moveIn * -15 - 150});
         }
     }
-
     $('.video').click(function(){this.paused?this.play():this.pause();});
 
     $('a[href*="#"]')
