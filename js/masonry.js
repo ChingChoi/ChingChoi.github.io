@@ -15,4 +15,6 @@ $(window).on('load', function () {
 	  itemElem.classList.toggle('is-expanded');
 	  msnry.layout();
 	});
+
+	location.reload();
 });

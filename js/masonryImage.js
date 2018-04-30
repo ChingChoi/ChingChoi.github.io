@@ -1,5 +1,4 @@
-$(document).ready(function() {
-
+$(window).on('load', function () {
 	// external js: masonry.pkgd.js, imagesloaded.pkgd.js
 	var cw = $('.grid-item').children('a').children('img').width();
 	$('.grid-item').children('a').children('img').css({'height':cw+'px'});
@@ -14,9 +13,7 @@ $(document).ready(function() {
 	// layout Masonry after each image loads
 	$grid.imagesLoaded().progress( function() {
 	  $grid.masonry();
-	});  
-
-
+	});
 })
 
 $(window).resize(function() {
