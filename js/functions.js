@@ -81,5 +81,5 @@ $(document).ready(function() {
 
 
 $(window).on('load', function() {
-    $('.video').load($(window).trigger('resize'));
+    window.dispatchEvent(new Event('resize'));
 });
