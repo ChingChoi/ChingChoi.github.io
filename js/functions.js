@@ -13,8 +13,8 @@ $(document).ready(function() {
         if (window.pageYOffset > 0) {
             var moveIn = ((window.pageYOffset - contactDivider) / divider);
             $('#contact-info').css({opacity: moveIn * 1});
-            $('#contact-info').css({left: moveIn * 25});
-            $('#contact-background-image').css({left: moveIn * -15 - 150});
+            $('#contact-info').css({left: moveIn * 25 });
+            $('#contact-background-image').css({left: moveIn * -15 - 150 });
         }
     }
     $('.video').click(function(){this.paused?this.play():this.pause();});

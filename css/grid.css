@@ -51,7 +51,7 @@ body { font-family: sans-serif; }
 
 #interest-container-grid .grid-sizer,
 #interest-container-grid .grid-item {
-  width: 31.33%;
+  width: 31.98%;
   margin-bottom: 1%;
   margin-left: 1%
 }
@@ -84,6 +84,14 @@ body { font-family: sans-serif; }
   display: block;
   max-width: 100%;
   opacity: 0.1;
+  filter: brightness(95%);
+  z-index: -1;
+}
+
+.dummy-button-img {
+  display: block;
+  max-width: 100%;
+  opacity: 0.88;
   filter: brightness(95%);
   z-index: -1;
 }

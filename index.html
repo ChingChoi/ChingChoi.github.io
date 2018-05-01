@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type='text/javascript' src='js/bootstrap.min.js'></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
   <script type='text/javascript' src='js/masonryImage.js'></script>
   <script type='text/javascript' src='js/functions.js'></script>
@@ -45,7 +46,7 @@
     <div id="mission-statement">
       <h3 class="theme-font">Mission</h3>
       <p class="theme-font">Give you a hand :)</p>
-      <p class="theme-font">Much like giving you an awesome paw! Xd</p>
+      <p class="theme-font">Or paw-fist! Xd</p>
     </div>
   </div>
 
@@ -53,60 +54,51 @@
     <div class="grid-sizer"></div>
     <div class="grid-item">
       <div class="grid-item-text theme-font">
-        </br></br>
-        <h1>AI - Neural Networks</h1>
+        <h1 class="padding-top-ten">AI - Neural Networks</h1>
         <p class="theme-font">Trained using 60,000 hand-written digits from MNIST dataset</p>
         <p class="theme-font">Recognize user hand-written digit at 96.85% accuracy</p>
-        <p class="theme-font"></br></br>Group of 2</br>1 week</p>
+        <p class="theme-font padding-top-five">Group of 2</br>1 week</p>
         <a class="theme-font project-link" href="https://github.com/ChingChoi/NeuralNetworks">https://github.com/ChingChoi/NeuralNetworks</a>
       </div>
       <img class="dummy-img" src="./img/dummy.jpeg"/>
     </div>
     <div class="grid-item">
-      <video class="video">
+      <video class="video" preload="none">
         <source type="video/mp4" src="./video/demo-nn.mp4">
       </video>
-      <img class="dummy-img" src="./img/dummy.jpeg"/>
-    </div>
-    <div class="grid-item">
-      <video class="video">
-        <source type="video/mp4" src="./video/demo-jmpeg.mp4">
-      </video>
-      <img class="dummy-img" src="./img/dummy.jpeg"/>
+      <img class="dummy-button-img" src="./img/dummybutton.jpeg"/>
     </div>
     <div class="grid-item">
       <div class="grid-item-text theme-font">
-        </br>
-        <h1>JPEG & MPEG</h1>
+        <h1 class="padding-top-five">JPEG & MPEG</h1>
         <p class="theme-font">Compression of images and video using jpeg and mpeg</p>
-        <p class="theme-font"></br>Compress image up to 33 times smaller</br> video 26 times smaller for 360 frames</p>
-        <p class="theme-font"></br>Individual project</br>1 month</p>
+        <p class="theme-font padding-top-five">Compress image up to 33 times smaller</br> video 26 times smaller for 360 frames</p>
+        <p class="theme-font padding-top-five">Individual project</br>1 month</p>
         <a class="theme-font project-link" href="https://github.com/ChingChoi/MPEGCompression">https://github.com/ChingChoi/MPEGCompression</a>
       </div>
       <img class="dummy-img" src="./img/dummy2.jpg"/>
     </div>
     <div class="grid-item">
+      <video class="video" preload="none">
+        <source type="video/mp4" src="./video/demo-jmpeg.mp4">
+      </video>
+      <img class="dummy-button-img" src="./img/dummybutton.jpeg"/>
+    </div>
+    <div class="grid-item">
+      <video class="video" preload="none">
+        <source type="video/mp4" src="./video/demo-particle.mp4">
+      </video>
+      <img class="dummy-button-img" src="./img/dummybutton3.jpeg"/>
+    </div>
+    <div class="grid-item">
       <div class="grid-item-text theme-font">
-        </br></br>
-        <h1>Particle Collision</h1>
+        <h1 class="padding-top-ten">Particle Collision</h1>
         <p class="theme-font">Simulate physics of particle collision</p>
-        <p class="theme-font"></br>Complete elastic </br>drag force of air / deep water</p>
-        <p class="theme-font"></br>Group of 2</br>1 day</p>
+        <p class="theme-font padding-top-five">Complete elastic </br>drag force of air / deep water</p>
+        <p class="theme-font padding-top-five">Group of 2</br>1 day</p>
         <a class="theme-font project-link" href="https://github.com/ChingChoi/ParticleCollision">https://github.com/ChingChoi/ParticleCollision</a>
       </div>
       <img class="dummy-img" src="./img/dummy3.jpg"/>
-    </div>
-    <div class="grid-item">
-      <video class="video">
-        <source type="video/mp4" src="./video/demo-particle.mp4">
-      </video>
-      <img class="dummy-img" src="./img/dummy3.jpg"/>
-    </div>
-    <div class="grid-item">
-      <video class="video">
-        <source type="video/mp4" src="./video/demo-sound-editor.mp4">
-      </video>
-      <img class="dummy-img" src="./img/dummy4.jpg"/>
     </div>
     <div class="grid-item">
       <div class="grid-item-text theme-font">
@@ -118,6 +110,12 @@
         <a class="theme-font project-link" href="https://github.com/ChingChoi/SoundEditor">https://github.com/ChingChoi/SoundEditor</a>
       </div>
       <img class="dummy-img" src="./img/dummy4.jpg"/>
+    </div>
+    <div class="grid-item">
+      <video class="video" preload="none">
+        <source type="video/mp4" src="./video/demo-sound-editor.mp4">
+      </video>
+      <img class="dummy-button-img" src="./img/dummybutton4.jpeg"/>
     </div>
   </div>
   <div id="show-more-less-container">
@@ -184,7 +182,7 @@
   <div class="grid" id="interest-container-grid">
     <div class="grid-sizer"></div>
     <div class="grid-item grid-message-dark">
-      <p class="theme-font">Love programming + gaming :)</p>
+      <p class="theme-font">Programming + gaming :)</p>
     </div>
     <div class="grid-item">
       <img src="./img/cat-training.gif"/>

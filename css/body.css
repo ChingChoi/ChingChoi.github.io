@@ -9,6 +9,10 @@
   outline: none;
 }
 
+h1 {
+  margin: 0 !important;
+}
+
 h1:hover {
   cursor: default;
 }
@@ -161,7 +165,6 @@ body { font-family: sans-serif;}
 #mission-container {
 	height: auto !important;
 	padding-top: 40px;
-	min-height: 70% !important;
 	overflow: hidden;
 }
 
@@ -282,7 +285,7 @@ body { font-family: sans-serif;}
 
 #show-more:hover {
   cursor: pointer;
-}
+} 
 
 #show-less:hover {
   cursor: pointer;
@@ -349,6 +352,22 @@ body { font-family: sans-serif;}
 #bottom {
   position: absolute;
   top: 25%;
+}
+
+.padding-top-five {
+  padding-top: 5%;
+}
+
+.padding-bottom-five {
+  padding-bottom: 5%;
+}
+
+.padding-top-ten {
+  padding-top: 10%;
+}
+
+.padding-bottom-ten {
+  padding-bottom: 10%;
 }
 
 @keyframes fadein {
