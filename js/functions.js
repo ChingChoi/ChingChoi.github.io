@@ -17,7 +17,30 @@ $(document).ready(function() {
             $('#contact-background-image').css({left: moveIn * -15 - 150 });
         }
     }
-    $('.video').click(function(){this.paused?this.play():this.pause();});
+
+    // Play/pause video when a video is clicked
+    $('.video').click(function(){
+        this.paused?this.play():this.pause();
+    });
+
+    $('#show-more').click(function() {
+        $('.grid-hidden-group').removeClass('grid-hidden');
+        $.fn.myfunction();
+    })
+
+    $('#show-less').click(function() {
+        $('.grid-hidden-group').addClass('grid-hidden');
+        $.fn.myfunction();
+    })
+
+    $.fn.myfunction = function() {
+        var $grid = $('.grid').masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            columnWidth: '.grid-sizer'
+        });
+        $grid.masonry();
+    }; 
 
     $('a[href*="#"]')
     // Remove links that don't actually link to anything
