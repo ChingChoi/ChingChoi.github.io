@@ -23,6 +23,14 @@ $(document).ready(function() {
         this.paused?this.play():this.pause();
     });
 
+    $('.video').hover(
+        function() {
+            $(this).next().next().animate({opacity: 1}, 1000);
+        }, function() {
+            $(this).next().next().animate({opacity: 0}, 1000);
+        }
+    )
+
     $('#show-more').click(function() {
         $('.grid-hidden-group').removeClass('grid-hidden');
         $.fn.myfunction();

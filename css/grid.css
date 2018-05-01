@@ -88,6 +88,17 @@ body { font-family: sans-serif; }
   z-index: -1;
 }
 
+.dummy-img-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  max-width: 100%;
+  opacity: 0;
+  filter: brightness(95%);
+  z-index: 0;
+}
+
 .dummy-button-img {
   display: block;
   max-width: 100%;
