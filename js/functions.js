@@ -30,26 +30,6 @@ $(document).ready(function() {
             $(this).next().next().animate({opacity: 0}, 1000);
         }
     )
-
-    $('#skill-container-grid .grid-item').eq(0).hover(
-        function() {
-            $(this).stop().animate({backgroundColor: "red"}, 1000);
-            // $('#skill-container-grid .grid-item').eq(1).css("background-color", "#FEE");
-            // $('#skill-container-grid .grid-item').eq(2).css("background-color", "#FED");
-            // $('#skill-container-grid .grid-item').eq(3).css("background-color", "#FED");
-            // $('#skill-container-grid .grid-item').eq(4).css("background-color", "#FFE");
-            // $('#skill-container-grid .grid-item').eq(5).css("background-color", "#FFE");
-            // $('#skill-container-grid .grid-item').eq(6).css("background-color", "#EFE");
-            // $('#skill-container-grid .grid-item').eq(7).css("background-color", "#EFE");
-            // $('#skill-container-grid .grid-item').eq(8).css("background-color", "#EFF");
-            // $('#skill-container-grid .grid-item').eq(9).css("background-color", "#EFF");
-            // $('#skill-container-grid .grid-item').eq(10).css("background-color", "#EEF");
-            // $('#skill-container-grid .grid-item').eq(11).css("background-color", "#EEF");
-            // $('#skill-container-grid .grid-item').eq(12).css("background-color", "#FEF");
-            // $('#skill-container-grid .grid-item').eq(13).css("background-color", "#FEF");       
-        }, function() {
-        }
-    )
  
     $('#show-more').click(function() {
         $('.grid-hidden-group').removeClass('grid-hidden');
