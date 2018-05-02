@@ -67,6 +67,7 @@ body { font-family: sans-serif;}
 .nav-item {
   font-size: 0.9em;
   text-decoration: none;
+  text-align: center;
 }
 
 .nav-item a:hover {
@@ -210,19 +211,6 @@ body { font-family: sans-serif;}
    padding-top: 1%;
 }
 
-/*
-#project-container img {
-	min-height: 100%;
-	min-width: 120%;
-	position: relative;
-
-	-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-	   /* -moz-animation: fadein 3s; /* Firefox < 16 */
-	    /* -ms-animation: fadein 3s; Internet Explorer */
-	     /* -o-animation: fadein 3s; Opera < 12.1 */
-	        /* animation: fadein 3s; */
-/* } */ 
-
 #project-questions {
 	position: fixed;
 	left: 10%;
@@ -283,11 +271,11 @@ body { font-family: sans-serif;}
   color: #222;
 }
 
-#show-more:hover {
+#show-more h3:hover {
   cursor: pointer;
 } 
 
-#show-less:hover {
+#show-less h3:hover {
   cursor: pointer;
 }
 
@@ -368,6 +356,104 @@ body { font-family: sans-serif;}
 
 .padding-bottom-ten {
   padding-bottom: 10%;
+}
+
+.to-red {
+  background-color: #EEE;
+  transition: background-color 1.5s linear;
+  -moz-transition: background-color 1.5s linear; /* Firefox 4 */
+  -webkit-transition: background-color 1.5s linear; /* Safari and Chrome */
+  -o-transition: background-color 1.5s linear; /* Opera */
+  -ms-transition: background-color 1.5s linear; /* Explorer 10 */
+}
+
+.to-red:hover { 
+  background-color: #FDD !important;
+  transition: 0.3s;
+}
+
+.to-orange {
+  background-color: #EEE;
+  transition: background-color 3s linear;
+  -moz-transition: background-color 3s linear; /* Firefox 4 */
+  -webkit-transition: background-color 3s linear; /* Safari and Chrome */
+  -o-transition: background-color 3s linear; /* Opera */
+  -ms-transition: background-color 3s linear; /* Explorer 10 */
+}
+
+.to-orange:hover { 
+  background-color: #FDB !important;
+  transition: 0.3s;
+}
+
+.to-yellow {
+  background-color: #EEE;
+  transition: background-color 3s linear;
+  -moz-transition: background-color 3s linear; /* Firefox 4 */
+  -webkit-transition: background-color 3s linear; /* Safari and Chrome */
+  -o-transition: background-color 3s linear; /* Opera */
+  -ms-transition: background-color 3s linear; /* Explorer 10 */
+}
+
+.to-yellow:hover { 
+  background-color: #FFD !important;
+  transition: 0.3s;
+}
+
+.to-green {
+  background-color: #EEE;
+  transition: background-color 3s linear;
+  -moz-transition: background-color 3s linear; /* Firefox 4 */
+  -webkit-transition: background-color 3s linear; /* Safari and Chrome */
+  -o-transition: background-color 3s linear; /* Opera */
+  -ms-transition: background-color 3s linear; /* Explorer 10 */
+}
+
+.to-green:hover { 
+  background-color: #DFD !important;
+  transition: 0.3s;
+}
+
+.to-cyan {
+  background-color: #EEE;
+  transition: background-color 3s linear;
+  -moz-transition: background-color 3s linear; /* Firefox 4 */
+  -webkit-transition: background-color 3s linear; /* Safari and Chrome */
+  -o-transition: background-color 3s linear; /* Opera */
+  -ms-transition: background-color 3s linear; /* Explorer 10 */
+}
+
+.to-cyan:hover { 
+  background-color: #DFF !important;
+  transition: 0.3s;
+}
+
+.to-blue {
+  background-color: #EEE;
+  transition: background-color 3s linear;
+  -moz-transition: background-color 3s linear; /* Firefox 4 */
+  -webkit-transition: background-color 3s linear; /* Safari and Chrome */
+  -o-transition: background-color 3s linear; /* Opera */
+  -ms-transition: background-color 3s linear; /* Explorer 10 */
+}
+
+.to-blue:hover { 
+  background-color: #DDF !important;
+  transition: 0.3s;
+}
+
+.to-purple {
+  background-color: #EEE;
+  transition: background-color 3s linear;
+  -moz-transition: background-color 3s linear; /* Firefox 4 */
+  -webkit-transition: background-color 3s linear; /* Safari and Chrome */
+  -o-transition: background-color 3s linear; /* Opera */
+  -ms-transition: background-color 3s linear; /* Explorer 10 */
+}
+
+.to-purple:hover { 
+  background-color: #DCF !important;
+  transition: 0.3s;
 }
 
 @keyframes fadein {

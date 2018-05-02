@@ -114,6 +114,10 @@ body { font-family: sans-serif; }
   z-index: 1;
 }
 
+.video:hover {
+  cursor: pointer;
+}
+
 .grid-item-text {
   position: absolute;
   width: 100%;
