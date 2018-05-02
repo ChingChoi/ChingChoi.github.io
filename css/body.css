@@ -256,7 +256,7 @@ body { font-family: sans-serif;}
 
 #show-more-less-container {
   margin: 0 auto;
-  min-height: 2.5vw;
+  min-height: 4.5vw;
 }
 
 #show-more {
@@ -269,6 +269,7 @@ body { font-family: sans-serif;}
   text-align: center;
   background-color: #EEE;
   color: #222;
+  padding: 1% 0%;
 }
 
 #show-more h3:hover {
@@ -289,6 +290,7 @@ body { font-family: sans-serif;}
   text-align: center;
   background-color: #222;
   color: #DDD;
+  padding: 1% 0%;
 }
 
 #show-more h3 {
@@ -330,11 +332,11 @@ body { font-family: sans-serif;}
 }
 
 #contact-info h3 {
-  font-size: 3vw;
+  font-size: 3em;
 }
 
 #contact-info p {
-  font-size: 1.5vw;
+  font-size: 1.5em;
 }
 
 #bottom {

@@ -34,11 +34,36 @@ $(document).ready(function() {
     $('#show-more').click(function() {
         $('.grid-hidden-group').removeClass('grid-hidden');
         $.fn.myfunction();
-    })
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#grid-hidden-first').offset().top - 39
+        }, 1000, function() {
+            var $target = $('#grid-hidden-first');
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+            } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+            };
+        });
+    });
 
     $('#show-less').click(function() {
         $('.grid-hidden-group').addClass('grid-hidden');
         $.fn.myfunction();
+        $('html, body').animate({
+            scrollTop: $('#grid-visible-last').offset().top - 39
+        }, 1000, function() {
+            var $target = $('#grid-visible-last');
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+            } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+            };
+        });
     })
 
     $.fn.myfunction = function() {
