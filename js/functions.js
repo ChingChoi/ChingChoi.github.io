@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var isMobile = false;
     $.fn.portraitmode = function() {
         $('#a-mission').text('M');
         $('#a-project').text('P');
@@ -48,19 +49,25 @@ $(document).ready(function() {
         $grid.masonry();
     }; 
 
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+        // Take the user to a different screen here.
+        $.fn.portraitmode();            
+    }
     var currentState;
     if (window.innerWidth < 900) {
         $.fn.portraitmode();
     } else {
         currentState = 0;
     }
+    if (!isMobile) {
     $(window).resize(function() {
         if (window.innerWidth < 900 && currentState == 0) {
             $.fn.portraitmode();
         } else if (window.innerWidth >= 900 && currentState == 1) {
             $.fn.landscapemode();
         }
-    });
+        });        
+    }
 
     var percentHeight;
     $(window).on('load', (function() {
