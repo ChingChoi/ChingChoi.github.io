@@ -1,8 +1,73 @@
 $(document).ready(function() {
+    $.fn.portraitmode = function() {
+        $('#a-mission').text('M');
+        $('#a-project').text('P');
+        $('#a-skill').text('S');
+        $('#a-interest').text('I');
+        $('#a-contact').text('C');
+        $('#project-container .grid-sizer').css("width", "98%");
+        $('#project-container .grid-item').css("width", "98%");
+        $.fn.reorder();
+        $.fn.myfunction();
+        currentState = 1;
+    };
+    $.fn.reorder = function() {
+        for (var i = 1; i < $('.grid-description').length; i+=2) {
+            $('.grid-description').eq(i).insertAfter($('.grid-video').eq(i - 1));
+        }
+    };
+    $.fn.restoreOrder = function() {
+        for (var i = 1; i < $('.grid-description').length; i+=2) {
+            $('.grid-description').eq(i).insertAfter($('.grid-video').eq(i));
+        }
+    }
+    $.fn.myfunction = function() {
+        $('.grid').masonry('destroy');
+        var $grid = $('.grid').masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            columnWidth: '.grid-sizer',
+            horizontalOrder: true
+        });
+        $grid.masonry();
+    }; 
+
+    var currentState;
+    if (window.innerWidth < 900) {
+        $.fn.portraitmode();
+    } else {
+        currentState = 0;
+    }
+    $(window).resize(function() {
+        if (window.innerWidth < 900 && currentState == 0) {
+            $.fn.portraitmode();
+        } else if (window.innerWidth >= 900 && currentState == 1) {
+            $('#a-mission').text('mission');
+            $('#a-project').text('project');
+            $('#a-skill').text('skill');
+            $('#a-interest').text('interest');
+            $('#a-contact').text('contact');
+            $('#project-container .grid-sizer').css("width", "48.5%");
+            $('#project-container .grid-item').css("width", "48.5%");
+            $.fn.restoreOrder();
+            $.fn.myfunction();
+            currentState = 0;
+        }
+    });
+
+    var percentHeight;
+    $(window).on('load', (function() {
+        if (window.innerHeight > $('#contact-background-image').height()) {
+            percentHeight = (window.innerHeight - $('#contact-background-image').height()) / window.innerHeight * 100 + 10;            
+        } else {
+            percentHeight = 10;
+        }
+    }));
+
     window.onscroll = function() {
         var divider = $('#mission-container').offset().top + 90;
-        var contactDivider = $('#contact-container').offset().top;
-            if (window.pageYOffset > 0) {
+        var contactDivider = $('#contact-container').offset().top;            
+        if (window.pageYOffset > 0) {
             var movement = (window.pageYOffset / divider);
             $('#mission-background-image').css({left: movement * -25});
         }
@@ -10,13 +75,32 @@ $(document).ready(function() {
             var opac = (window.pageYOffset / divider);
             $('#mission-statement').css({opacity: 1 - (opac * 1) / 5});
         }
-        if (window.pageYOffset > 0) {
-            var moveIn = ((window.pageYOffset - contactDivider) / divider);
-            $('#contact-info').css({opacity: moveIn * 1});
-            $('#contact-info').css({left: moveIn * 25 });
-            $('#contact-background-image').css({left: moveIn * -15 - 150 });
+        // Different handling for when height > width
+        if(window.innerHeight > window.innerWidth){
+            $('#contact-info').css("top", "" + percentHeight + "%");
+            var maxScrollable = $(window).height() - window.innerHeight;
+            var divHeight = $('#contact-background-image').height();
+            var visibleScrollSpot = maxScrollable - divHeight;
+            if ((window.pageYOffset - visibleScrollSpot) / divHeight > 0.8) {
+                var fractionalLocation = (window.pageYOffset - divHeight) / visibleScrollSpot;
+                var f = (fractionalLocation - 0.8) / 0.2
+                $('#contact-info').css({opacity: f});
+                $('#contact-info').css({left: f * 25});
+                $('#contact-background-image').css({left: f * -150 - 150 });
+            } else {
+                $('#contact-info').css({opacity: 0});                
+            }
         }
-    }
+        else {
+            if (window.pageYOffset > 0) {
+                var moveIn = ((window.pageYOffset - contactDivider) / divider);
+                $('#contact-info').css("top", "10%");
+                $('#contact-info').css({opacity: moveIn * 1});
+                $('#contact-info').css({left: moveIn * 25 });
+                $('#contact-background-image').css({left: moveIn * -15 - 150 });
+            }
+        }
+    };
 
     // Play/pause video when a video is clicked
     $('.video').click(function(){
@@ -64,16 +148,7 @@ $(document).ready(function() {
                 $target.focus(); // Set focus again
             };
         });
-    })
-
-    $.fn.myfunction = function() {
-        var $grid = $('.grid').masonry({
-            itemSelector: '.grid-item',
-            percentPosition: true,
-            columnWidth: '.grid-sizer'
-        });
-        $grid.masonry();
-    }; 
+    });
 
     $('a[href*="#"]')
     // Remove links that don't actually link to anything

@@ -313,7 +313,6 @@ body { font-family: sans-serif;}
 
 #contact-container {
 	height: auto !important;
-	min-height: 70% !important;
   overflow: hidden;
   position: relative;
 }

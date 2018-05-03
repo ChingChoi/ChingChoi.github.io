@@ -20,26 +20,26 @@
     <section id="header-section">
       <div class="container text-white">
         <div class="row mh1">
-          <div class="col-sm-3 nav-item"></div>
-          <div class="col-sm-1 nav-item">
-            <a href="#mission-container" id="fav-icon"></a>
+          <div class="col-xs-3 nav-item"></div>
+          <div class="col-xs-1 nav-item">
+            <a href="#fav-container" id="fav-icon"></a>
           </div>
-          <div class="col-sm-1 nav-item">
-            <a href="#mission-container">Mission</a>
+          <div class="col-xs-1 nav-item">
+            <a href="#mission-container" id="a-mission">Mission</a>
           </div>
-          <div class="col-sm-1 nav-item">
-            <a href="#project-container">Projects</a>
+          <div class="col-xs-1 nav-item">
+            <a href="#project-container" id="a-project">Projects</a>
           </div>
-          <div class="col-sm-1 nav-item">
-            <a href="#skill-container">Skills</a>
+          <div class="col-xs-1 nav-item">
+            <a href="#skill-container" id="a-skill">Skills</a>
           </div>
-          <div class="col-sm-1 nav-item">
-            <a href="#interest-container">Interests</a>
+          <div class="col-xs-1 nav-item">
+            <a href="#interest-container" id="a-interest">Interests</a>
           </div>
-          <div class="col-sm-1 nav-item">
-            <a href="#bottom">Contact</a>
+          <div class="col-xs-1 nav-item">
+            <a href="#bottom" id="a-contact">Contact</a>
           </div>
-          <div class="col-sm-2 nav-item"></div>
+          <div class="col-xs-2 nav-item"></div>
         </div>
       </div>
     </section>
@@ -55,7 +55,7 @@
 
   <div class="grid" id="project-container">
     <div class="grid-sizer"></div>
-    <div class="grid-item">
+    <div class="grid-item  grid-description">
       <div class="grid-item-text theme-font">
         <h1 class="padding-top-ten">Neural Networks</h1>
         <p class="theme-font">AI</p>
@@ -65,14 +65,21 @@
       </div>
       <img class="dummy-img" src="./img/dummy.jpeg"/>
     </div>
-    <div class="grid-item">
+    <div class="grid-item grid-video">
       <video class="video" preload="none">
         <source type="video/mp4" src="./video/demo-nn.mp4">
       </video>
       <img class="dummy-button-img" src="./img/dummybutton.jpeg"/>
       <img class="dummy-img-hover" src="./img/dummybuttoncyan.jpg"/>
     </div>
-    <div class="grid-item">
+    <div class="grid-item grid-video">
+      <video class="video" preload="none">
+        <source type="video/mp4" src="./video/demo-jmpeg.mp4">
+      </video>
+      <img class="dummy-button-img" src="./img/dummybutton.jpeg"/>
+      <img class="dummy-img-hover" src="./img/dummybuttoncyan.jpg"/>
+    </div>
+    <div class="grid-item grid-description">
       <div class="grid-item-text theme-font">
         <h1 class="padding-top-three">JPEG & MPEG</h1>
         <p class="theme-font">Compression of images and video using jpeg and mpeg</p>
@@ -82,21 +89,7 @@
       </div>
       <img class="dummy-img" src="./img/dummy2.jpg"/>
     </div>
-    <div class="grid-item">
-      <video class="video" preload="none">
-        <source type="video/mp4" src="./video/demo-jmpeg.mp4">
-      </video>
-      <img class="dummy-button-img" src="./img/dummybutton.jpeg"/>
-      <img class="dummy-img-hover" src="./img/dummybuttoncyan.jpg"/>
-    </div>
-    <div class="grid-item">
-      <video class="video" preload="none">
-        <source type="video/mp4" src="./video/demo-particle.mp4">
-      </video>
-      <img class="dummy-button-img" src="./img/dummybutton3.jpeg"/>
-      <img class="dummy-img-hover" src="./img/dummybuttoncyan3.jpg"/>
-    </div>
-    <div class="grid-item">
+    <div class="grid-item grid-description">
       <div class="grid-item-text theme-font">
         <h1 class="padding-top-ten">Particle Collision</h1>
         <p class="theme-font">Simulate physics of particle collision</p>
@@ -106,7 +99,21 @@
       </div>
       <img class="dummy-img" src="./img/dummy3.jpg"/>
     </div>
-    <div class="grid-item">
+    <div class="grid-item grid-video">
+      <video class="video" preload="none">
+        <source type="video/mp4" src="./video/demo-particle.mp4">
+      </video>
+      <img class="dummy-button-img" src="./img/dummybutton3.jpeg"/>
+      <img class="dummy-img-hover" src="./img/dummybuttoncyan3.jpg"/>
+    </div>
+    <div class="grid-item grid-video" id="grid-visible-last">
+      <video class="video" preload="none">
+        <source type="video/mp4" src="./video/demo-sound-editor.mp4">
+      </video>
+      <img class="dummy-button-img" src="./img/dummybutton4.jpeg"/>
+      <img class="dummy-img-hover" src="./img/dummybuttoncyan4.jpg"/>
+    </div>
+    <div class="grid-item grid-description">
       <div class="grid-item-text theme-font">
         <h1 class="padding-top-three">Sound Editor</h1>
         <p class="theme-font">Analyze & process sound frequencies</p>
@@ -116,21 +123,7 @@
       </div>
       <img class="dummy-img" src="./img/dummy4.jpg"/>
     </div>
-    <div class="grid-item" id="grid-visible-last">
-      <video class="video" preload="none">
-        <source type="video/mp4" src="./video/demo-sound-editor.mp4">
-      </video>
-      <img class="dummy-button-img" src="./img/dummybutton4.jpeg"/>
-      <img class="dummy-img-hover" src="./img/dummybuttoncyan4.jpg"/>
-    </div>
-    <div class="grid-item grid-hidden-group grid-hidden" id="grid-hidden-first">
-      <video class="video" preload="none" muted>
-        <source type="video/mp4" src="./video/demo-face-the-shape.mp4">
-      </video>
-      <img class="dummy-button-img" src="./img/dummybutton3.jpeg">
-      <img class="dummy-img-hover" src="./img/dummybuttoncyan3.jpg"/>
-    </div>
-    <div class="grid-item grid-hidden-group grid-hidden">
+    <div class="grid-item grid-hidden-group grid-hidden grid-description" id="grid-hidden-first">
       <div class="grid-item-text theme-font">
         <h1 class="padding-top-ten">Face The Shape</h1>
         <p class="theme-font">Brain game!</p>        
@@ -141,7 +134,21 @@
       </div>
       <img class="dummy-img" src="./img/dummy3.jpg"/>
     </div>
-    <div class="grid-item grid-hidden-group grid-hidden">
+    <div class="grid-item grid-hidden-group grid-hidden grid-video">
+      <video class="video" preload="none" muted>
+        <source type="video/mp4" src="./video/demo-face-the-shape.mp4">
+      </video>
+      <img class="dummy-button-img" src="./img/dummybutton3.jpeg">
+      <img class="dummy-img-hover" src="./img/dummybuttoncyan3.jpg"/>
+    </div>
+    <div class="grid-item grid-hidden-group grid-hidden grid-video">
+      <video class="video" preload="none" muted>
+        <source type="video/mp4" src="./video/demo-game-jam.mp4">
+      </video>
+      <img class="dummy-button-img" src="./img/dummybutton5.jpg">
+      <img class="dummy-img-hover" src="./img/dummybuttoncyan5.jpg">
+    </div>
+    <div class="grid-item grid-hidden-group grid-hidden grid-description">
       <div class="grid-item-text theme-font">
         <h1 class="padding-top-ten">TGTG</h1>
         <p class="theme-font">Game Jam 2018!</p>
@@ -151,13 +158,6 @@
         <a class="theme-font project-link" href="https://github.com/ChingChoi/GameJam-2018">https://github.com/ChingChoi/GameJam-2018</a>
       </div>
       <img class="dummy-img" src="./img/dummy5.jpg"/>
-    </div>
-    <div class="grid-item grid-hidden-group grid-hidden">
-      <video class="video" preload="none" muted>
-        <source type="video/mp4" src="./video/demo-game-jam.mp4">
-      </video>
-      <img class="dummy-button-img" src="./img/dummybutton5.jpg">
-      <img class="dummy-img-hover" src="./img/dummybuttoncyan5.jpg">
     </div>
   </div>
   <div id="show-more-less-container">
@@ -235,11 +235,11 @@
     <div class="grid-item">
       <img src="./img/cat-programming.gif"/>
     </div>
-    <div class="grid-item">
-      <img src="./img/cat-movie.gif"/>
-    </div>
     <div class="grid-item grid-message-dark">
       <p class="theme-font">Light exercise xd</p>
+    </div>
+    <div class="grid-item">
+      <img src="./img/cat-movie.gif"/>
     </div>
   </div>
 
