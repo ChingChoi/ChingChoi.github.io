@@ -7,9 +7,23 @@ $(document).ready(function() {
         $('#a-contact').text('C');
         $('#project-container .grid-sizer').css("width", "98%");
         $('#project-container .grid-item').css("width", "98%");
+        $('.grid-item-text').css("font-size", "3vw");
         $.fn.reorder();
         $.fn.myfunction();
         currentState = 1;
+    };
+    $.fn.landscapemode = function() {
+        $('#a-mission').text('mission');
+        $('#a-project').text('project');
+        $('#a-skill').text('skill');
+        $('#a-interest').text('interest');
+        $('#a-contact').text('contact');
+        $('#project-container .grid-sizer').css("width", "48.5%");
+        $('#project-container .grid-item').css("width", "48.5%");
+        $('.grid-item-text').css("font-size", "1.5vw");
+        $.fn.restoreOrder();
+        $.fn.myfunction();
+        currentState = 0;
     };
     $.fn.reorder = function() {
         for (var i = 1; i < $('.grid-description').length; i+=2) {
@@ -22,7 +36,9 @@ $(document).ready(function() {
         }
     }
     $.fn.myfunction = function() {
-        $('.grid').masonry('destroy');
+        if ($('.grid').masonry()) {
+            $('.grid').masonry('destroy');
+        }
         var $grid = $('.grid').masonry({
             itemSelector: '.grid-item',
             percentPosition: true,
@@ -42,16 +58,7 @@ $(document).ready(function() {
         if (window.innerWidth < 900 && currentState == 0) {
             $.fn.portraitmode();
         } else if (window.innerWidth >= 900 && currentState == 1) {
-            $('#a-mission').text('mission');
-            $('#a-project').text('project');
-            $('#a-skill').text('skill');
-            $('#a-interest').text('interest');
-            $('#a-contact').text('contact');
-            $('#project-container .grid-sizer').css("width", "48.5%");
-            $('#project-container .grid-item').css("width", "48.5%");
-            $.fn.restoreOrder();
-            $.fn.myfunction();
-            currentState = 0;
+            $.fn.landscapemode();
         }
     });
 
