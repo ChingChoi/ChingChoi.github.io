@@ -117,7 +117,8 @@ $(document).ready(function() {
     };
 
     // Play/pause video when a video is clicked
-    $('.video').click(function(){
+    $('.video').on('click', function(e){
+        e.preventDefault();
         this.paused?this.play():this.pause();
     });
 
