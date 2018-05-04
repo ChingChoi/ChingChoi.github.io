@@ -121,13 +121,13 @@ $(document).ready(function() {
         }
     };
 
-    // Play/pause video when a video is clicked
-    $('.video').on('click', function(e){
-        e.preventDefault();
-        this.paused?this.play():this.pause();
-    });
 
     if (!isMobile) {
+        // Play/pause video when a video is clicked
+        $('.video').on('click', function(e){
+            e.preventDefault();
+            this.paused?this.play():this.pause();
+        });
         $('.video').hover(
             function() {
                 $(this).next().next().animate({opacity: 1}, 1000);
@@ -135,6 +135,12 @@ $(document).ready(function() {
                 $(this).next().next().animate({opacity: 0}, 1000);
             }
         )        
+    } else {
+        // Play/pause video when a video is clicked
+        $('.video').on('touchstart', function(e){
+            e.preventDefault();
+            this.paused?this.play():this.pause();
+        });
     }
  
     $('#show-more').click(function() {
