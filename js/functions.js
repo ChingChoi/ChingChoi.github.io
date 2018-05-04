@@ -76,6 +76,9 @@ $(document).ready(function() {
         } else {
             percentHeight = 10;
         }
+        $('#interest-container-grid .grid-item').eq(1).children().eq(0).attr('src','./img/cat-training.gif');
+        $('#interest-container-grid .grid-item').eq(3).children().eq(0).attr('src','./img/cat-programming.gif');
+        $('#interest-container-grid .grid-item').eq(5).children().eq(0).attr('src','./img/cat-movie.gif');
     }));
 
     window.onscroll = function() {
