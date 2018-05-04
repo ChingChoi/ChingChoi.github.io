@@ -103,6 +103,7 @@ $(document).ready(function() {
                 $('#contact-background-image').css({left: f * -150 - 150 });
             } else {
                 $('#contact-info').css({opacity: 0});                
+                $('#contact-background-image').css({left: -250 });
             }
         }
         else {
