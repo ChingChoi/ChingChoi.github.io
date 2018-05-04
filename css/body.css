@@ -457,6 +457,20 @@ body { font-family: sans-serif;}
   transition: 0.3s;
 }
 
+.to-dark-purple {
+  background-color: #EEE;
+  transition: background-color 3s linear;
+  -moz-transition: background-color 3s linear; /* Firefox 4 */
+  -webkit-transition: background-color 3s linear; /* Safari and Chrome */
+  -o-transition: background-color 3s linear; /* Opera */
+  -ms-transition: background-color 3s linear; /* Explorer 10 */
+}
+
+.to-dark-purple:hover { 
+  background-color: #CBE !important;
+  transition: 0.3s;
+}
+
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
