@@ -100,14 +100,14 @@ $(document).ready(function() {
             var divHeight = $('#contact-background-image').height();
             var visibleScrollSpot = maxScrollable - divHeight;
             if ((window.pageYOffset - visibleScrollSpot) / divHeight > 0.8) {
-                var fractionalLocation = (window.pageYOffset - divHeight) / visibleScrollSpot;
+                var fractionalLocation = (window.pageYOffset - visibleScrollSpot) / divHeight;
                 var f = (fractionalLocation - 0.8) / 0.2
                 $('#contact-info').css({opacity: f});
-                $('#contact-info').css({left: f * 25});
+                $('#contact-info').css({left: f * 50});
                 $('#contact-background-image').css({left: f * -150 - 150 });
             } else {
                 $('#contact-info').css({opacity: 0});                
-                $('#contact-background-image').css({left: -250 });
+                $('#contact-background-image').css({left: -150 });
             }
         }
         else {
